@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/screens/location_screen.dart';
-import 'package:weather_app/services/location.dart';
-import 'package:weather_app/services/networking.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather_app/services/weather.dart';
 
@@ -36,12 +34,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: SpinKitDoubleBounce(
-          color: Colors.white,
-          size: 100,
-        ),
+    return const Center(
+      child: SpinKitDoubleBounce(
+        color: Colors.white,
+        size: 100,
       ),
     );
   }

@@ -7,7 +7,6 @@ class NetworkHelper {
   NetworkHelper({required this.url});
 
   Future getData() async {
-    print(url);
     var urlObj = Uri.parse(url);
 
     http.Response response = await http.get(urlObj);
@@ -19,6 +18,7 @@ class NetworkHelper {
 
       return decodedData;
     } else {
+      // ignore: avoid_print
       print(response.statusCode);
     }
   }

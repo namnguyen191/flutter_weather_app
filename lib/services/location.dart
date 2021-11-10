@@ -44,6 +44,7 @@ class Location {
       latitude = userLocation.latitude;
       longtitude = userLocation.longitude;
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
